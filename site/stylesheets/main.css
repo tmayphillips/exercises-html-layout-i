@@ -1,4 +1,128 @@
+/* CSS HEX */
+html {
+  --light: #e8ebe4ff;
+  --dark: #171219ff;
+  --midnight-green: #225560ff;
+  --link: #f0803cff;
+  --dark-purple: #310d20ff;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gruppo';font-size: 22px;
+  /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  background-color: --light;
+}
+
 .container {
   margin: 0 auto 0 auto;
   max-width: 720px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: var(--midnight-green);
+}
+
+#page-header {
+  display: flex;
+  float: left;
+  width: 100%;
+  margin: 20px 15px 10px;
+  padding: 10px;
+  flex-direction: row;
+  background-color: white;
+}
+
+#page-header a {
+  flex: 25%;
+  margin-top: 10px;
+}
+
+#page-header nav {
+  flex: 75%;
+  margin-left: 20px;
+}
+
+.post-header h1 {
+  color: var(--link);
+}
+
+.sidebar h2 {
+  color: var(--link);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 20px;
+}
+
+.site-title {
+  font-size: 35px;
+  font-weight: bold;
+  
+}
+
+.slide-right {
+  animation: 5s slide-right;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.sidebar {
+  flex: 1;
+  margin: 0px 10px;
+  background-color: white;
+  padding: 0px 20px;
+  margin-right: 25px;
+  height: 300px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+main {
+  flex: 3;
+  background-color: white;
+  padding: 0px 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+section ul {
+  padding-left: 30px;
+}
+
+main h2 {
+  color: var(--midnight-green)
+}
+
+footer {
+  display: block;
+  float: left;
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
 }
